@@ -1,0 +1,206 @@
+/* colors*/
+
+:root {
+    --main-color: #a60303;
+    --black: #0d0d0d;
+    --font-color: #d9d8d6;
+    --red: #a60303;
+}
+
+/* fonts */
+/* 
+font-family: 'Kanit', sans-serif;
+font-family: 'VT323', monospace;
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background-color: var(--main-color);
+    height: 200vh;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 7rem;
+    background-color: var(--black);
+    color: var(--font-color);
+    z-index: 1;
+}
+
+nav div.logo {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+i.fa-square-js,
+h2.brand {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+
+i.fa-square-js {
+    color: var(--main-color);
+    margin-right: 0.5rem;
+}
+
+nav ul {
+    display: none;
+    /* display: flex; */
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 1;
+    padding: 0 2rem;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    font-size: 1.6rem;
+    color: var(--font-color);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+i.fa-bars {
+    font-size: 3.5rem;
+    padding: 0 2rem;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+header {
+    height: 100vh;
+    background-image: url(img/pexels-mikechie-esparagoza-normal.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.header-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+div.title {
+    color: var(--font-color);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+div.title-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* div.title-logo i.fa-square-js,
+h1.title {
+    font-size: 8.5rem;
+    color: var(--font-color);
+} */
+
+/* div.title-logo i.fa-square-js {
+    -webkit-text-stroke: 2px var(--font-color);
+    color: var(--main-color);
+} */
+
+div.title-logo div.js {
+    position: relative;
+    width: 8.5rem;
+    height: 8.5rem;
+    border: 2px solid var(--font-color);
+    border-radius: 1.5rem;
+    background-color: var(--main-color);
+}
+
+div.js span {
+    position: absolute;
+    bottom: 0;
+    right: 0.5rem;
+    font-family: 'VT323', monospace;
+    font-size: 6rem;
+    line-height: 5rem;
+}
+
+h1.title {
+    font-family: 'VT323', monospace;
+    font-size: 12rem;
+    /* -webkit-text-stroke: 2px var(--font-color); */
+    color: var(--font-color);
+}
+
+div.title p.description {
+    text-transform: none;
+    font-size: 1.6rem;
+    padding: 0 2rem;
+}
+
+div.socials {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30rem;
+    height: 10rem;
+    margin-top: 3rem;
+    background-color: var(--black);
+    border: 4px double var(--red);
+    border-radius: 1rem;
+}
+
+.pacman {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: #f2d648;
+    position: relative;
+}
+
+.pacman__mouth {
+    background: var(--black);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+}
+
+div.socials i,
+div.socials span {
+    color: var(--font-color);
+    font-size: 4rem;
+}
+
+i.fa-ghost.fa-solid {
+    color: var(--red);
+}
+
+button.play {
+    font-size: 4rem;
+    font-family: 'VT323', monospace;
+    text-transform: uppercase;
+    padding: 0.5rem 2rem;
+    margin-top: 10rem;
+    background-color: var(--red);
+    border: none;
+    border-radius: 2rem;
+}
