@@ -4,7 +4,7 @@
     --main-color: #a60303;
     --black: #0d0d0d;
     --font-color: #d9d8d6;
-    --red: #a60303;
+    --red: #f20505;
 }
 
 /* fonts */
@@ -13,17 +13,40 @@ font-family: 'Kanit', sans-serif;
 font-family: 'VT323', monospace;
  */
 
+/* animations */
+@-webkit-keyframes color-change {
+    0% {
+        background: var(--main-color);
+    }
+
+    100% {
+        background: var(--red);
+        box-shadow: 0 0 3rem 0.5rem var(--red);
+    }
+}
+@keyframes color-change {
+    0% {
+        background: var(--main-color);
+    }
+
+    100% {
+        background: var(--red);
+        box-shadow: 0 0 3rem 0.5rem var(--red);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 10px;
-    font-family: 'Kanit', sans-serif;
+
+    font-family: 'VT323', monospace;
 }
 
 body {
     background-color: var(--main-color);
-    height: 200vh;
+    min-height: 200vh;
 }
 
 nav {
@@ -50,6 +73,10 @@ i.fa-square-js,
 h2.brand {
     font-size: 3.5rem;
     text-transform: uppercase;
+}
+
+h2.brand {
+    font-family: 'Kanit', sans-serif;
 }
 
 i.fa-square-js {
@@ -127,8 +154,8 @@ h1.title {
 
 div.title-logo div.js {
     position: relative;
-    width: 8.5rem;
-    height: 8.5rem;
+    width: 7rem;
+    height: 7rem;
     border: 2px solid var(--font-color);
     border-radius: 1.5rem;
     background-color: var(--main-color);
@@ -138,39 +165,38 @@ div.js span {
     position: absolute;
     bottom: 0;
     right: 0.5rem;
-    font-family: 'VT323', monospace;
     font-size: 6rem;
     line-height: 5rem;
 }
 
 h1.title {
-    font-family: 'VT323', monospace;
-    font-size: 12rem;
+    font-size: 10rem;
     /* -webkit-text-stroke: 2px var(--font-color); */
     color: var(--font-color);
 }
 
 div.title p.description {
     text-transform: none;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     padding: 0 2rem;
+    font-family: 'Kanit', sans-serif;
 }
 
 div.socials {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 30rem;
-    height: 10rem;
-    margin-top: 3rem;
+    margin-top: 4rem;
     background-color: var(--black);
     border: 4px double var(--red);
     border-radius: 1rem;
+    width: 70%;
+    padding: 2rem 1rem;
 }
 
 .pacman {
-    width: 4rem;
-    height: 4rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     background: #f2d648;
     position: relative;
@@ -181,13 +207,13 @@ div.socials {
     position: absolute;
     width: 100%;
     height: 100%;
-    clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+    clip-path: polygon(105% 74%, 44% 48%, 100% 21%);
 }
 
 div.socials i,
 div.socials span {
     color: var(--font-color);
-    font-size: 4rem;
+    font-size: 2rem;
 }
 
 i.fa-ghost.fa-solid {
@@ -196,11 +222,71 @@ i.fa-ghost.fa-solid {
 
 button.play {
     font-size: 4rem;
-    font-family: 'VT323', monospace;
     text-transform: uppercase;
     padding: 0.5rem 2rem;
     margin-top: 10rem;
-    background-color: var(--red);
+    color: var(--font-color);
     border: none;
     border-radius: 2rem;
+    -webkit-animation: color-change 2s linear infinite alternate both;
+    animation: color-change 2s linear infinite alternate both;
+}
+
+section.games {
+    height: 100vh;
+}
+
+section.contact {
+    min-height: 100vh;
+    background-color: var(--black);
+}
+
+section.contact h2.contact {
+    font-size: 6rem;
+    color: var(--font-color);
+    text-align: center;
+    padding: 3rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 2rem;
+    padding: 1rem;
+    color: var(--font-color);
+    border: 6px double var(--main-color);
+    border-radius: 2rem;
+}
+
+form label {
+    font-size: 2.5rem;
+}
+
+form input,
+form textarea {
+    width: 80%;
+    font-size: 3rem;
+    border: 2px solid var(--red);
+    border-radius: 1rem;
+    color: var(--font-color);
+    background-color: var(--black);
+    margin: 0.5rem 0 2rem 0;
+    padding: 1rem;
+}
+
+form textarea {
+    font-size: 1.6rem;
+    height: 10rem;
+}
+
+form input.submit {
+    background-color: var(--main-color);
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+footer {
+    text-align: center;
+    font-size: 3rem;
 }

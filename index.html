@@ -51,6 +51,44 @@
                 <button class="play">let's play</button>
             </div>
         </header>
+        <main>
+            <section class="games">
+                <div class="game1">
+                    <h2 class="first game-title">game1</h2>
+                    <div class="game">
+                        <button class="game">play</button>
+                    </div>
+                </div>
+                <div class="game2">
+                    <h2 class="second game-title">game2</h2>
+                    <div class="game">
+                        <button class="game">play</button>
+                    </div>
+                </div>
+                <div class="game3">
+                    <h2 class="third game-title">game3</h2>
+                    <div class="game">
+                        <button class="game">play</button>
+                    </div>
+                </div>
+            </section>
+            <section class="contact">
+                <h2 class="contact">Contact Us</h2>
+                <form action="submit-form.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required />
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <input class="submit" type="submit" value="submit" />
+                </form>
+            </section>
+        </main>
+        <footer>JSArcade &copy; 2023</footer>
         <script src="https://kit.fontawesome.com/e27b5dbfe8.js" crossorigin="anonymous"></script>
     </body>
 </html>
