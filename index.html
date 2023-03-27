@@ -25,7 +25,17 @@
             </ul>
             <i class="fa-solid fa-bars"></i>
         </nav>
-        <header>
+        <div class="side-menu">
+            <a href="#home">home</a>
+            <a href="#games">games</a>
+            <a href="#contact">contact</a>
+            <div class="ghosts">
+                <i class="fa-solid fa-ghost"></i>
+                <i class="fa-solid fa-ghost"></i>
+                <i class="fa-solid fa-ghost"></i>
+            </div>
+        </div>
+        <header id="home">
             <div class="header-wrapper">
                 <div class="title">
                     <div class="title-logo">
@@ -52,7 +62,7 @@
             </div>
         </header>
         <main>
-            <section class="games">
+            <section class="games" id="games">
                 <div class="game game1">
                     <div class="dark-wrapper">
                         <div class="game-title">
@@ -96,7 +106,7 @@
                     </div>
                 </div>
             </section>
-            <section class="contact">
+            <section class="contact" id="contact">
                 <h2 class="contact">Contact Us</h2>
                 <form action="submit-form.php" method="post">
                     <label for="name">Name:</label>
@@ -114,5 +124,6 @@
         </main>
         <footer>JSArcade &copy; 2023</footer>
         <script src="https://kit.fontawesome.com/e27b5dbfe8.js" crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>

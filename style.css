@@ -35,17 +35,21 @@ font-family: 'VT323', monospace;
     }
 }
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 10px;
     font-family: 'VT323', monospace;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--main-color);
+    background: rgb(166, 3, 3);
+    background: -moz-linear-gradient(125deg, rgba(166, 3, 3, 1) 20%, rgba(242, 5, 5, 1) 80%);
+    background: -webkit-linear-gradient(125deg, rgba(166, 3, 3, 1) 20%, rgba(242, 5, 5, 1) 80%);
+    background: linear-gradient(125deg, rgba(166, 3, 3, 1) 20%, rgba(242, 5, 5, 1) 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a60303",endColorstr="#f20505",GradientType=1);
     min-height: 200vh;
 }
 
@@ -89,7 +93,6 @@ nav ul {
     /* display: flex; */
     align-items: center;
     justify-content: space-around;
-    flex-grow: 1;
     padding: 0 2rem;
 }
 
@@ -111,6 +114,38 @@ i.fa-bars {
     color: var(--main-color);
     cursor: pointer;
 }
+
+div.side-menu {
+    display: none;
+}
+
+div.side-menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--black);
+    width: 50%;
+    height: 50%;
+    padding: 3rem;
+}
+
+div.side-menu a,
+div.side-menu div i  {
+    display: block;
+    font-size: 5rem;
+    color: var(--font-color);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+div.side-menu div i {
+    display: inline-block;
+}
+
 
 header {
     height: 100vh;
@@ -230,6 +265,7 @@ button.play {
     border-radius: 2rem;
     -webkit-animation: color-change 2s linear infinite alternate both;
     animation: color-change 2s linear infinite alternate both;
+    cursor: pointer;
 }
 
 section.games {
@@ -280,7 +316,7 @@ div.game-title h2 {
     font-family: 'Kanit', sans-serif;
 }
 
-div.game-title span i{
+div.game-title span i {
     font-size: 2.5rem;
 }
 
@@ -300,9 +336,13 @@ div.game button.game-play {
     font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 1rem;
+    cursor: pointer;
 }
 
 section.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     min-height: 100vh;
     background-color: var(--black);
 }
@@ -314,16 +354,17 @@ section.contact h2.contact {
     padding: 3rem;
 }
 
-
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem 2rem;
+    justify-content: center;
+    margin: 3rem auto;
     padding: 1rem;
     color: var(--font-color);
     border: 6px double var(--main-color);
     border-radius: 2rem;
+    width: 80%;
 }
 
 form label {
@@ -351,9 +392,246 @@ form input.submit {
     background-color: var(--main-color);
     text-transform: uppercase;
     font-size: 4rem;
+    cursor: pointer;
 }
 
 footer {
     text-align: center;
     font-size: 3rem;
+}
+
+@media (min-height: 840px) {
+    div.title-logo div.js {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    h1.title {
+        font-size: 12rem;
+    }
+
+    div.title p.description {
+        font-size: 1.6rem;
+    }
+
+    button.play {
+        font-size: 6rem;
+    }
+
+    form {
+        gap: 1.5rem;
+    }
+
+    form input,
+    form textarea {
+        font-size: 4rem;
+    }
+
+    form textarea {
+        font-size: 1.6rem;
+        height: 15rem;
+    }
+}
+
+@media (min-width: 768px) {
+    div.title-logo div.js {
+        width: 13rem;
+        height: 13rem;
+    }
+
+    div.js span {
+        bottom: 1rem;
+        font-size: 10rem;
+    }
+
+    h1.title {
+        font-size: 20rem;
+    }
+
+    div.title p.description {
+        font-size: 2rem;
+    }
+
+    .pacman {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    div.socials i,
+    div.socials span {
+        color: var(--font-color);
+        font-size: 4rem;
+    }
+
+    button.play {
+        font-size: 10rem;
+    }
+
+    div.game-title h2 {
+        font-size: 8rem;
+    }
+
+    div.game-title span i {
+        font-size: 6rem;
+    }
+
+    div.game-title p {
+        font-size: 1.8rem;
+    }
+
+    div.game button.game-play {
+        height: 6rem;
+        font-size: 5rem;
+    }
+
+    section.contact {
+        min-height: 100vh;
+        background-color: var(--black);
+    }
+
+    section.contact h2.contact {
+        font-size: 10rem;
+    }
+
+    form label {
+        font-size: 3.5rem;
+    }
+
+    form input.submit {
+        font-size: 5rem;
+    }
+
+    footer {
+        font-size: 5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    nav {
+        display: flex;
+    }
+
+    nav ul {
+        display: flex;
+        flex-basis: 60%;
+    }
+
+    nav ul li a {
+        font-size: 4rem;
+    }
+
+    i.fa-bars {
+        display: none;
+    }
+
+    div.title-logo div.js {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    div.js span {
+        bottom: 3rem;
+        font-size: 15rem;
+    }
+
+    h1.title {
+        font-size: 30rem;
+    }
+
+    div.title p.description {
+        font-size: 2.4rem;
+    }
+
+    .pacman {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    div.socials i,
+    div.socials span {
+        font-size: 5rem;
+    }
+
+    button.play {
+        font-size: 10rem;
+    }
+
+    div.game-title h2 {
+        font-size: 6rem;
+    }
+
+    div.game-title span i {
+        font-size: 5rem;
+    }
+
+    div.game-title p {
+        font-size: 1.8rem;
+    }
+
+    div.game button.game-play {
+        height: 6rem;
+        font-size: 5rem;
+    }
+
+    section.contact h2.contact {
+        font-size: 8rem;
+    }
+
+    form label {
+        font-size: 5rem;
+    }
+
+    form input.submit {
+        font-size: 6rem;
+    }
+
+    footer {
+        font-size: 6rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    nav ul {
+        flex-basis: 40%;
+        margin-right: 4rem;
+    }
+
+    nav ul li a {
+        font-size: 5rem;
+    }
+
+    div.title-logo div.js {
+        width: 25rem;
+        height: 25rem;
+    }
+
+    div.js span {
+        bottom: 5rem;
+        font-size: 20rem;
+    }
+
+    h1.title {
+        font-size: 35rem;
+    }
+
+    div.title p.description {
+        font-size: 4.4rem;
+    }
+
+    div.game-title p {
+        font-size: 2.8rem;
+    }
+
+    div.game button.game-play {
+        height: 8rem;
+        font-size: 7rem;
+    }
+
+    form {
+        max-width: 120rem;
+    }
+
+    form textarea {
+        height: 40rem;
+    }
 }
