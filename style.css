@@ -108,11 +108,28 @@ nav ul li a {
     text-transform: uppercase;
 }
 
-i.fa-bars {
+i.fa-bars.active {
+    display: block;
     font-size: 3.5rem;
     padding: 0 2rem;
     color: var(--main-color);
     cursor: pointer;
+}
+
+i.fa-bars {
+    display: none;
+}
+
+i.fa-x {
+    display: none;
+    font-size: 3.5rem;
+    padding: 0 2rem;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+i.fa-x.active {
+    display: block;
 }
 
 div.side-menu {
@@ -129,14 +146,14 @@ div.side-menu.active {
     right: 0;
     background-color: var(--black);
     width: 50%;
-    height: 50%;
+    height: 75%;
     padding: 3rem;
 }
 
 div.side-menu a,
-div.side-menu div i  {
+div.side-menu div i {
     display: block;
-    font-size: 5rem;
+    font-size: 3rem;
     color: var(--font-color);
     text-transform: uppercase;
     text-decoration: none;
@@ -145,7 +162,6 @@ div.side-menu div i  {
 div.side-menu div i {
     display: inline-block;
 }
-
 
 header {
     height: 100vh;
@@ -434,6 +450,11 @@ footer {
 }
 
 @media (min-width: 768px) {
+    div.side-menu a,
+    div.side-menu div i {
+        font-size: 5rem;
+    }
+
     div.title-logo div.js {
         width: 13rem;
         height: 13rem;
@@ -520,7 +541,7 @@ footer {
         font-size: 4rem;
     }
 
-    i.fa-bars {
+    i.fa-bars.active {
         display: none;
     }
 
