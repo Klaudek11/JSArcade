@@ -1,11 +1,11 @@
-const arcadeTitle = [ARCADE];
+// const arcadeTitle = ['ARCADE'];
 
 const bars = document.querySelector('.fa-bars');
 const hiddenMenu = document.querySelector('.side-menu');
 const exit = document.querySelector('.fa-x');
 const playBtn = document.getElementById('play');
 const gamesSection = document.getElementById('games');
-const h1Title = document.addEventListener('title');
+const h1Title = document.querySelector('title');
 
 const toggleActive = () => {
     hiddenMenu.classList.toggle('active');
