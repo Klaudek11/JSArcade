@@ -22,12 +22,14 @@ section div {
 }
 
 section div.score {
+    display: flex;
+    justify-content: space-around;
     flex-basis: 10%;
 }
 
-section div.score span.score {
+section div.score span {
     font-size: 3rem;
-    letter-spacing: 1rem;
+    text-align: center;
 }
 
 section div.computer-choice,
@@ -55,7 +57,7 @@ section div.result {
 }
 
 section div.result span {
-    font-size: 1.6rem;
+    font-size: 2.5rem;
 }
 
 section div.result span.pc-choice i,
@@ -67,22 +69,16 @@ section div.game-panel i.active {
     color: var(--red);
 }
 
-section div.statistics {
+section div.play {
     flex-basis: 10%;
+    background-color: var(--red);
+    cursor: pointer;
 }
 
-section div.statistics div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    box-shadow: none;
-}
-
-section div.statistics div h3,
-section div.statistics div span {
-    font-size: 1.2rem;
+section div.play span {
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: var(--black);
 }
 
 footer {
